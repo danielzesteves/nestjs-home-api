@@ -10,3 +10,14 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - ./:/app
+  home-mariadb:
+    container_name: home-mariadb
+    image: mariadb:10.1.48
+    environment:
+      MYSQL_ROOT_PASSWORD: homePass
+      MYSQL_DATABASE: home
+      MYSQL_USER: root
+    ports:
+      - 3307:3306
+    volumes:
+        - ./init:/docker-entrypoint-initdb.d
