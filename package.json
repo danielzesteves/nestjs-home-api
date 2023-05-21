@@ -1,5 +1,11 @@
 {
+  "dependencies": {
+    "@nestjs/sequelize": "^9.0.2",
+    "mysql2": "^3.2.4",
+    "sequelize": "^6.31.1",
+    "sequelize-typescript": "^2.1.5"
+  },
   "devDependencies": {
-    "prisma": "^4.13.0"
+    "@types/sequelize": "^4.28.15"
   }
 }
